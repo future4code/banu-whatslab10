@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
 // import React from "react";
 // import styled from 'styled-components';
 
@@ -54,6 +57,7 @@
 //     }
 // }
 
+<<<<<<< HEAD
 // export default Inputs;
 =======
 import React from "react";
@@ -131,3 +135,6 @@ render () {
 
 export default Inputs;
 >>>>>>> master
+=======
+// export default Inputs;
+>>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
