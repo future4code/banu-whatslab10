@@ -15,11 +15,15 @@
 //                 <Mensagens> {this.props.usuario} </Mensagens>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 //                 <Mensagens> {this.props.mensagem}</Mensagens>
 >>>>>>> master
 =======
 >>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
+=======
+//                 <Mensagens> {this.props.mensagem}</Mensagens>
+>>>>>>> master
 //             </ContainerMensagem>
 //         )
 //     }

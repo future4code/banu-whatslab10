@@ -11,11 +11,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
     "react-scripts": "^4.0.3",
 =======
     "react-scripts": "4.0.3",
+=======
+    "react-scripts": "^1.1.5",
+>>>>>>> master
 =======
     "react-scripts": "^1.1.5",
 >>>>>>> master

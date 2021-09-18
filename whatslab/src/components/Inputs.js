@@ -133,8 +133,12 @@ render () {
 }
 
 
+<<<<<<< HEAD
 export default Inputs;
 >>>>>>> master
 =======
 // export default Inputs;
 >>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
+=======
+export default Inputs;
+>>>>>>> master
