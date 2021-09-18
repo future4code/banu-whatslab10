@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const ContainerInput = styled.div `
 display: flex;
-justify-content: left;
+justify-content: center;
 align-items: flex-end;
 height: 20px;
 padding: 10px;
@@ -15,7 +15,6 @@ gap: 8px;
 
 const Input = styled.input`
 height: 20px;
-
 `
 
 const Button = styled.button`
@@ -72,4 +71,3 @@ render () {
 
 
 export default Inputs;
-
