@@ -8,8 +8,23 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 553746b80743bf67fd7291e40cdc0369434bb5ef
+    "react-scripts": "^4.0.3",
+=======
+    "react-scripts": "4.0.3",
+=======
     "react-scripts": "^1.1.5",
+>>>>>>> master
+=======
+    "react-scripts": "^1.1.5",
+>>>>>>> master
     "styled-components": "^5.3.1",
+>>>>>>> 87aac61189bfd3df9c54de8a618ab5b9b2de7cd8
     "web-vitals": "^1.1.2"
   },
   "scripts": {
