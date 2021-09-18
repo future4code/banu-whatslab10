@@ -1,56 +1,74 @@
 import React from "react";
 import styled from 'styled-components';
 
-const InputContainer = styled.div `
-width: 100vw;
+
+
+const ContainerInput = styled.div `
+display: flex;
+justify-content: left;
+align-items: flex-end;
+height: 20px;
+padding: 10px;
+margin: 20px;
+gap: 8px;
 `
 
-const dadosMensagem = [
-    {
-    usuario: "",
-    mensagem: ""
-    }
-  ]
+const Input = styled.input`
+height: 20px;
+
+`
+
+const Button = styled.button`
+height: 28px;   
+width: 100px;
+background-color: #006400;
+color: white;
+border-radius: 4px;
+&:hover {
+background-color: #005000;
+cursor: pointer;
+}
+`
 
 export class Inputs extends React.Component {
     state = {
-        dadosMensagem: dadosMensagem
+        nome:  "",
+        mensagem: ""
     }
 
-    addMensagem = (NMensagem) => {
-        const novaMensagem = [...this.state.dadosMensagem, NMensagem]
+alterarNome = (event) => {
+    this.setState({nome: event.target.value});
+}
 
-        this.setState({dadosMensagem: novaMensagem})
-    }
+novaMensagem = (event) => {
+    this.setState({mensagem: event.target.value});
+}
 
-    onChangeMensagem = (event) => {
-        this.setState({
-            usuario: event.target.value,
-            mensagem: event.target.value
-        })
-    }
+onClickEnviar = () => {
+    this.setState({
+        nome: "",
+        mensagem: ""
+    })
+}
 
-
-
-render() {
+render () {
     return (
-        <InputContainer>
-        <input
-        placeholder={"Usuário"}
-        value={this.state.usuario}
-        onChange={this.onChangeMensagem}
+        <ContainerInput>
+        <Input 
+        placeholder="Usuário"
+        value={this.state.nome} 
+        onChange={this.alterarNome} 
         />
-
-        <input
-          placeholder={"Mensagem"}
-          value={this.state.mensagem}
-          onChange={this.onChangeMensagem}
+        <Input 
+        placeholder="Digite sua mensagem"
+        value={this.state.mensagem}
+        onChange={this.novaMensagem} 
         />
-
-        <button onClick={this.addMensagem}>Enviar</button>
-        </InputContainer>
+        <Button onClick={this.onClickEnviar}> Enviar </Button>
+        </ContainerInput>
         )
     }
 }
+
 
 export default Inputs;
