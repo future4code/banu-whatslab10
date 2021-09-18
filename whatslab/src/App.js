@@ -15,6 +15,7 @@ height: 80px;
 width: 100vw;
 padding-left: 20px;
 margin: 0;
+box-sizing: border-box;
 `
 
 
