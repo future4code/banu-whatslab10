@@ -12,7 +12,7 @@ class App extends React.Component {
         <h1>WhatsLab</h1>
         <header className="App-header">
         </header>
-        <body>{Mensagens}</body>
+        <body></body>
         <Inputs />
       </div>
     )
