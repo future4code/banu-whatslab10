@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Inputs from './components/Inputs';
-import { Mensagens } from './components/Mensagens';
 import styled from 'styled-components';
 
 const Titulo = styled.h1`
@@ -26,7 +25,6 @@ class App extends React.Component {
         <Titulo>WhatsLab</Titulo>
         <header className="App-header">
         </header>
-        <Mensagens />
         <Inputs />
       </div>
     )
