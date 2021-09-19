@@ -1,7 +1,20 @@
 import React from "react";
 import styled from 'styled-components';
 
+const Container = styled.div `
+display: block;
+`
 
+const ContainerMensagem = styled.div `
+width: 50vw;
+height: 75vh;
+display: flex;
+flex-direction: column-reverse;
+justify-content: flex-start;
+border: 1px solid black; 
+margin-left: 25vw;
+margin-top: 20px;
+`
 
 const ContainerInput = styled.div `
 display: flex;
@@ -29,42 +42,69 @@ cursor: pointer;
 }
 `
 
+const NomeTexto = styled.div`
+width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+`
+
 export class Inputs extends React.Component {
     state = {
-        nome:  "",
-        mensagem: ""
+        listaMensagens: [],
+        nomeUsuario:  "",
+        mensagemUsuario: ""
     }
 
 alterarNome = (event) => {
-    this.setState({nome: event.target.value});
+    this.setState({nomeUsuario: event.target.value});
 }
 
 novaMensagem = (event) => {
-    this.setState({mensagem: event.target.value});
+    this.setState({mensagemUsuario: event.target.value});
 }
 
 onClickEnviar = () => {
+    const novaMensagem = {
+        usuario: this.state.nomeUsuario,
+        texto: this.state.mensagemUsuario
+    }
+
+    const novasMensagens = [novaMensagem, ...this.state.listaMensagens]
+
     this.setState({
-        nome: "",
-        mensagem: ""
+        listaMensagens: novasMensagens, listaMensagens: ""
     })
+
 }
 
 render () {
     return (
+        <Container>
+            <ContainerMensagem>
+                {this.state.listaMensagens.map((mensagem) => {
+                    return (
+                        <NomeTexto> {mensagem.usuario}: {mensagem.texto} </NomeTexto>
+                    )
+                })}
+                </ContainerMensagem>
         <ContainerInput>
         <Input 
         placeholder="Usuário"
-        value={this.state.nome} 
+        value={this.state.nomeUsuario} 
         onChange={this.alterarNome} 
         />
         <Input 
         placeholder="Digite sua mensagem"
-        value={this.state.mensagem}
+        value={this.state.mensagemUsuario}
         onChange={this.novaMensagem} 
         />
         <Button onClick={this.onClickEnviar}> Enviar </Button>
         </ContainerInput>
+        </Container>
         )
     }
 }
